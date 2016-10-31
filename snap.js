@@ -28,7 +28,8 @@
             tapToClose: true,
             touchToDrag: true,
             slideIntent: 40, // degrees
-            minDragDistance: 5
+            minDragDistance: 5,
+            disableTranslate: false
         },
         cache = {
             simpleStates: {
@@ -95,7 +96,7 @@
             },
             canTransform: function(){
                 if (settings.disableTranslate) {
-                    return true;
+                    return false;
                 }
 
                 return typeof settings.element.style[cache.vendor+'Transform'] !== 'undefined';
