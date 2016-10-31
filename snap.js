@@ -196,7 +196,7 @@
                 },
                 easeTo: function(n) {
 
-                    if( !utils.canTransform() || settings.displace ){
+                    if( !utils.canTransform() ){
                         cache.translation = n;
                         action.translate.x(n);
                     } else {
